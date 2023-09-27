@@ -87,5 +87,8 @@ app:
     templates:
       location: /templates/
 
+server:
+  port: 3000
+
 
 #Mail properties. Enable less secure apps if using Gmail id
