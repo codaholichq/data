@@ -90,11 +90,5 @@ app:
 server:
     port: 3000
 
-management:
-    endpoints:
-        web:
-            exposure:
-                include: "*"
-
 
 #Mail properties. Enable less secure apps if using Gmail id

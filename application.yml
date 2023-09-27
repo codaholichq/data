@@ -50,3 +50,10 @@ logging:
         meetona: INFO
         org.flywaydb: WARN
 #        org.springframework.security: INFO
+
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
