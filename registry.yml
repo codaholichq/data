@@ -1,9 +1,0 @@
-server:
-    port: 8081
-
-eureka:
-    instance:
-        hostname: ${EUREKA_HOST}:localhost
-    client:
-        fetch-registry: false
-        register-with-eureka: false
