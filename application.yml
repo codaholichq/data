@@ -37,7 +37,6 @@ spring:
             max-file-size: 1MB
 
 server:
-    port: 3000
     compression:
         enabled: true
     error:
