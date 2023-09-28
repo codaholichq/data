@@ -86,6 +86,21 @@ app:
     velocity:
         templates:
             location: /templates/
+            
+
+rabbitmq:
+    exchange:
+        name: ${RABBIT_EXCHANGE}
+    queue:
+        - user: ${RABBIT_USER_QUEUE}
+        - unit: ${RABBIT_UNIT_QUEUE}
+        - member: ${RABBIT_MEMBER_QUEUE}
+        - meeting: ${RABBIT_MEETING_QUEUE}
+    routing-key:
+        - user: ${RABBIT_USER_KEY}
+        - unit: ${RABBIT_UNIT_KEY}
+        - member: ${RABBIT_MEMBER_KEY}
+        - meeting: ${RABBIT_MEETING_KEY}
 
 server:
     port: 3000
