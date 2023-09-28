@@ -1,4 +1,9 @@
 spring:
+    cloud:
+        bus:
+            enabled: true
+            refresh:
+                enabled: true
     rabbitmq:
         host: ${RABBIT_HOST}
         port: ${RABBIT_PORT}
@@ -89,8 +94,7 @@ app:
             
 
 rabbitmq:
-    exchange:
-        name: ${RABBIT_EXCHANGE}
+    exchange: ${RABBIT_EXCHANGE}
     queue:
         - user: ${RABBIT_USER_QUEUE}
         - unit: ${RABBIT_UNIT_QUEUE}
