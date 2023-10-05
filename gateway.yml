@@ -5,6 +5,32 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+      routes:
+        - id: posts-route
+          uri: ${POSTS_ROUTE_URI:http://localhost:8081}
+          predicates:
+            - Path=/posts/**
+          filters:
+            - PrefixPath=/api
+            - AddResponseHeader=X-Powered-By, Codaholic Gateway Service
+        - id: comments-route
+          uri: ${COMMENTS_ROUTE_URI:http://localhost:8082}
+          predicates:
+            - Path=/comments/**
+          filters:
+            - PrefixPath=/api
+            - AddResponseHeader=X-Powered-By, Codaholic Gateway Service
 
 server:
   port: 3001
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    gateway:
+      enabled: true
