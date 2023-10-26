@@ -93,7 +93,12 @@ app:
   velocity:
     templates:
       location: /templates/
-
+  cors:
+    allowed-origins: ${ALLOWED_ORIGINS}
+    allowed-methods: GET, PUT, POST, HEAD, PATCH, DELETE, OPTIONS
+    max-age: 3600
+    allowed-headers: "Requestor-Type"
+    exposed-headers: "X-Get-Header"
 
 rabbitmq:
   exchange: ${RABBIT_EXCHANGE}
