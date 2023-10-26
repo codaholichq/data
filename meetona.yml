@@ -95,7 +95,7 @@ app:
       location: /templates/
   cors:
     allowed-origins:
-      - ${ALLOWED_ORIGINS}:http://localhost:4000
+      - ${ALLOWED_ORIGINS:http://localhost:4000}
     allowed-methods:
       - "GET"
       - "PUT"
