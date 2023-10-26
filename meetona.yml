@@ -94,7 +94,7 @@ app:
     templates:
       location: /templates/
   cors:
-    max-age: 3600L
+    max-age: 3600
     allowed-origins:
       - ${ALLOWED_ORIGINS:http://localhost:4000}
     allowed-methods:
