@@ -15,6 +15,10 @@ spring:
         ddl-auto: update
         format_sql: true
         show-sql: true
+        session:
+          events:
+            log:
+              LOG_QUERIES_SLOWER_THAN_MS=25
   jackson:
     time-zone: UTC
     serialization:
@@ -50,8 +54,10 @@ logging:
     root: WARN
     web: INFO
     meetona: INFO
-    org.flywaydb: WARN
-#        org.springframework.security: INFO
+    org:
+      flywaydb: WARN
+      hibernate:
+        SQL_SLOW: INFO
 
 
 management:
