@@ -1,5 +1,7 @@
 spring:
-  thread-executor: virtual
+  threads:
+    virtual:
+      enabled: true
   lifecycle:
     timeout-per-shutdown-phase: "20s"
   main:
