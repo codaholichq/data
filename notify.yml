@@ -1,0 +1,21 @@
+spring:
+  kafka:
+    consumer:
+      group-id: user-group
+      auto-offset-reset: earliest
+      bootstrap-servers: ${BOOTSTRAP_SERVERS:localhost:9092}
+      key-serializer: org.apache.kafka.common.serialization
+      value-serializer: org.apache.kafka.common.serialization
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+    protocol: smtp
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
