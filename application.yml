@@ -2,9 +2,6 @@ spring:
   threads:
     virtual:
       enabled: true
-  cloud:
-    compatibility-verifier:
-      enabled: false
   lifecycle:
     timeout-per-shutdown-phase: "20s"
   main:
