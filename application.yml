@@ -60,6 +60,7 @@ logging:
       flywaydb: WARN
       hibernate:
         SQL_SLOW: INFO
+    org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer: ERROR
 
 
 management:
